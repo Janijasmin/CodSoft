@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Calculate Me...</h1>
+    </div>
+
+    <div class="main">
+
+        <div>
+            <input type="text">
+        </div>
+
+        <div class="row">
+            <button type="button" onclick="clearDisplay()" class="diff-color">C</button>
+            <button type="button" onclick="calculatePercentage()" class="diff-color">%</button>
+            <button type="button" onclick="appendValue('/')" class="diff-color">/</button>
+            <button type="button" class="diff-color" onclick="removeLastChar()">←</button>
+            <!-- <button type="button" class="diff-color">⌫</button> -->
+        </div>
+
+        <div class="row">
+            <button type="button" onclick="appendValue('7')">7</button>
+            <button type="button" onclick="appendValue('8')">8</button>
+            <button type="button" onclick="appendValue('9')">9</button>
+            <button type="button" onclick="appendValue('*')" class="diff-color">*</button>
+        </div>
+
+        <div class="row">
+            <button type="button" onclick="appendValue('4')">4</button>
+            <button type="button" onclick="appendValue('5')">5</button>
+            <button type="button" onclick="appendValue('6')">6</button>
+            <button type="button" onclick="appendValue('+')" class="diff-color">+</button>
+        </div>
+
+        <div class="row">
+            <button type="button" onclick="appendValue('1')">1</button>
+            <button type="button" onclick="appendValue('2')">2</button>
+            <button type="button" onclick="appendValue('3')">3</button>
+            <button type="button" onclick="appendValue('-')" class="diff-color">-</button>
+        </div>
+
+        <div class="row">
+            <button type="button" onclick="appendValue('00')">00</button>
+            <button type="button" onclick="appendValue('0')">0</button>
+            <button type="button" onclick="appendValue('.')">.</button>
+            <button type="button" onclick="calculate()" id="equal">=</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
