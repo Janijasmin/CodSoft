@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat'; */
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Righteous', cursive; */
+    object-fit: cover;
+}
+
+*::selection {
+    background-color: #fff;
+    color: #95C11E;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 12px;
+    background-color: #000;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #95C11E;
+    border-radius: 30px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#nav {
+    height: 140px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+    /* 2 h4 na word vachhe gap apva*/
+    padding: 0px 133px;
+    padding-top: 29px;
+    /* background-color: red; */
+    position: fixed;
+    z-index: 99;
+}
+
+#nav img {
+    height: 85px;
+
+}
+
+#nav h4 {
+    font-size: 21px;
+    text-transform: uppercase;
+    /* font ne uppercase ma ferava*/
+    font-weight: 500;
+}
+
+#nav h3 {
+    font-size: 21px;
+    font-weight: normal;
+    right: 11.5%;
+    position: absolute;
+    background-color: #000;
+    border: 3px solid #95C11E;
+    border-radius: 40px;
+    width: 11%;
+    height: 46%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+#nav h3:hover {
+    color: #000;
+    background-color: #95C11E;
+    transition: all ease-in 0.5s;
+}
+
+#nav img:hover {
+    scale: 0.9;
+    transition: all ease-in 0.2s;
+}
+
+#cursor {
+    height: 25px;
+    width: 25px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur {
+    height: 400px;
+    width: 400px;
+    background-color: #9bbc40af;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(115px);
+    z-index: 9;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* video ne screen ma fit karva mate*/
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+    /* z-index: 30; */
+
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1 {
+    margin-top: 55px;
+    font-size: 175px;
+    font-weight: 1100;
+    position: relative;
+    line-height: 150px;
+    /* font-size: 6rem;
+    line-height: .86;
+    letter-spacing: .02em;
+    font-weight: 900;
+    text-transform: uppercase; */
+}
+
+#page1 h1::before {
+    /* pseudo element in css by which we can add text in website by css */
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: #000;
+    top: -7px;
+    left: -11px;
+    -webkit-text-stroke: 1.5px #95C11E;
+    z-index: -1;
+}
+
+#page1 h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 53px;
+    margin-bottom: 29px;
+
+}
+
+#page1 p {
+    font-size: 25px;
+    font-weight: 500;
+    width: 45%;
+    line-height: 32px;
+}
+
+#page1 #arrow {
+    height: 237px;
+    width: 237px;
+    /* background-color: red; */
+    position: absolute;
+    display: flex;
+    left: -3%;
+    bottom: 0;
+    color: transparent;
+    border: 2px solid #95C11E;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+
+
+#page1 #arrow i {
+    font-size: 60px;
+    color: #fff;
+}
+
+#page1 #arrow:hover {
+    scale: 0.33;
+    background-color: #95C11E;
+}
+
+#page1 #arrow:hover i {
+    scale: 2;
+    transition: all ease-in 0.2;
+}
+
+#page2 {
+    min-height: 100vh;   /* 100vh */
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 140px;
+    font-weight: 900px;
+    /* font-family: gilroy; */
+    /* -webkit-text-stroke: 2px #fff;  */
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    color: #000;
+    transition: all linear 0.2s;
+
+}
+
+#scroller h4:hover {
+    color: #95C11E;
+    /* -webkit-text-stroke: 2px #95C11E;  */
+    text-shadow: 2px 0 #95C11E, -2px 0 #95C11E, 0 2px #95C11E, 0 -2px #95C11E,
+        1px 1px #95C11E, -1px -1px #95C11E, 1px -1px #95C11E, -1px 1px #95C11E;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 28s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#about-us {
+    height: 80vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 0 70px;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+#about-us img:nth-child(1) {
+    /* margin-top: 200px; */
+    height: 220px;
+    width: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+#about-us img:nth-child(3) {
+    /* margin-top: 200px; */
+    height: 270px;
+    width: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+#about-us-in {
+    width: 57%;
+    text-align: center;
+}
+
+#about-us-in h3 {
+    /* margin-top: 215px; */
+    font-size: 65px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+#about-us-in p:nth-child(2) {
+    font-size: 26px;
+    line-height: 50px;
+}
+
+#about-us-in p:nth-child(3) {
+    margin-top: 40px;
+    font-size: 26px;
+    line-height: 50px;
+}
+
+#cards-container {
+    /* background-color: red; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+
+#dotcard {
+    width: 12%;
+    height: 15%;
+    /* background-color: red; */
+    top: 3.3%;
+    left: 7.8%;
+    position: absolute;
+}
+
+.card {
+    height: 76%;
+    width: 25%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.2s;
+    position: relative;
+}
+
+
+#card1 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1) ;
+}
+
+
+#card1>h4 {
+    opacity: 1;
+    color: #fff;
+    font-size: 53px;
+    text-transform: uppercase;
+    font-weight: 800;
+    bottom: 5%;
+    left: 8.5%;
+    position: absolute;
+}
+
+#card1:hover>h4 {
+    opacity: 0;
+}
+
+#card2 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card2>h5 {
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 800;
+    bottom: 24%;
+    left: 8%;
+    position: absolute;
+}
+
+#card2>h4 {
+    color: #fff;
+    font-size: 53px;
+    text-transform: uppercase;
+    font-weight: 800;
+    bottom: 5%;
+    left: 8%;
+    position: absolute;
+}
+
+#card2:hover>h4, #card2:hover>h5 {
+    opacity: 0;
+}
+
+#card3 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card3>h4 {
+    color: #fff;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    bottom: 5%;
+    left: 8%;
+    position: absolute;
+}
+
+#card3:hover>h4 {
+    opacity: 0;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #ACE022;
+    padding: 40px;
+    padding-top: 150px;
+    opacity: 0;
+    transition: all ease 0.2s;
+}
+
+.overlay h4 {
+    color: #000;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 23px;
+    /* white-space: nowrap; */
+}
+
+.overlay p {
+    color: #000;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.card:hover i {
+    font-size: 54px;
+    color: #000;
+    background-color: #ACE022;
+    right: -4%;
+    top: -4%;
+    position: absolute;
+    border: 2px solid #000;
+    padding: 40px;
+    border-radius: 90px;
+    transition: all ease-in 0.27s;
+}
+
+.card i:hover {
+    background-color: #fff;
+    color: #95C11E;
+}
+
+
+
+.card:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: rotate3d(1,1,0,20deg);
+}
+
+#green-div {
+    height: 46vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, #119F3A 0%,#ACE022 75%);
+
+    /* background-color: red; */
+}
+
+#green-div h4 {
+    color: #000;
+    width: 50%;
+    text-align: center;
+    line-height: 63px;
+    font-size: 40px;
+    text-transform: uppercase; 
+}
+
+#green-div img {
+    opacity: 0.55;
+    height: 100%;
+    object-fit: cover;
+    width: 12%;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+#page3>p {
+    width: 60%;
+    font-size: 37px;
+    line-height: 60px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+#page3 img {
+    position: absolute;
+    height: 60px;
+}
+
+#page3 #colon1 {
+    top: 20%;
+    left: 15%;
+}
+
+#page3 #colon2 {
+    right: 15%;
+    bottom :25%
+    /* top: 75%;
+    left: 85%; */
+}
+
+#page4 {
+    height: 30vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+.ele {
+    height: 71%;
+    width: 27%;
+    overflow: hidden;
+    border-radius: 19px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+.ele h2 {
+    height: 100%;
+    width: 100%;
+    background-color: #ACE022;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 53px;
+    /* font-size: 2vw; */
+    color: #000;
+    transition: all ease 0.5s;
+    position: absolute;
+    z-index: 10;
+}
+
+.ele img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    transition: all ease 0.5s;
+}
+
+.ele:hover h2 {
+    color: #fff;
+    background-color: transparent;
+}
+
+.ele:hover img {
+    scale: 1;
+}
+
+#page4 h1 {
+    font-size: 98px;
+    /* font-size: 6.4vw; */
+    position: absolute;
+    top: -16%;
+    /* -webkit-text-stroke: 2px #fff; */
+    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    color: #000;
+}
+
+footer {
+    margin-top: 4%;
+    height: 53.5vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119F3A 0%,#ACE022 80%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.5vw;
+    padding: 0px 120px;
+}
+
+footer>img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 10;
+
+}
+
+#f1 img {
+    height: 156px;
+    width: 156px;
+}
+
+#f1 img:hover {
+    scale: 0.9;
+    transition: all ease 0.2s;
+}
+
+#f1, #f2, #f3, #f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+    /* background-color: red; */
+}
+
+#f2 h2 {
+    font-size: 2.1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    /* font-weight: 900; */
+    margin-bottom: 8px;
+    line-height: 55px;
+}
+
+#f2 h2:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+#f3 h2 {
+    font-size: 2.1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    /* font-weight: 800; */
+    margin-bottom: 8px;
+    line-height: 55px;
+
+}
+
+#f3 h2:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+#f4 h4 {
+    font-size: 1.19vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    /* font-weight: 600; */
+    line-height: 32px;
+    margin-bottom: 8px;
+}
+
+#f4 h2 {
+    font-size: 1.4vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 8px;
+}
+
+#f4 h2:hover {
+    color: #fff;
+    cursor: pointer;
+}
